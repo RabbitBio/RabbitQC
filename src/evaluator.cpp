@@ -496,7 +496,8 @@ string Evaluator::evalAdapterAndReadNum(long& readNum, bool isR2) {
         for(int pos = 20; pos <= r->length()-keylen-shiftTail; pos++) {
             key = seq2int(r->mSeq.mStr, pos, keylen, key);
             if(key >= 0) {
-                counts[key]++;
+                //counts[key]++;
+                countArr[my_rank][key];
             }
         }
     }
